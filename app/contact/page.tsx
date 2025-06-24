@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Banner from '@/components/Banner';
 import InputField from "@/components/InputField";
+import TextareaField from "@/components/TextareaField";
 
 export default function ContactUs() {
     // Form state
@@ -105,22 +106,26 @@ export default function ContactUs() {
     return (
         <>
         <Banner heroImageUrl='/contactushero.jpg' bannerText="Your skin questions deserve expert answers - we're here to help!"></Banner>
-        <section id="contact" className="descwhite">
-        <h1 className="text-center container mx-auto px-4">Send us a message</h1>
-        <div className="contactus container mx-auto px-4">
+        <section id="contact" className="descwhite container mx-auto px-4">
+        <h1 className="text-center">Send us a message</h1>
+        <div className="contactus">
             <form method="POST" data-netlify="true" id="contactForm" onSubmit={handleSubmit} noValidate>
-            <input className={`inputform ${nameError ? "input-error" : ""}`} type="text" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} onBlur={handleNameBlur} pattern="[A-Za-z\s]+" minLength={2} required />
-            {nameError && <span className="error-message">{nameError}</span>}
+            <InputField type="text" name="name" placeholder="Full Name" value={name} error={nameError} onChange={(e) => setName(e.target.value)} onBlur={handleNameBlur}/>
+            {/*<input className={`inputform ${nameError ? "input-error" : ""}`} type="text" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} onBlur={handleNameBlur} pattern="[A-Za-z\s]+" minLength={2} required />
+            {nameError && <span className="error-message">{nameError}</span>}*/}
             {/*inputform is always applied. input-error is added only if nameError is truthy*/}
+            
+            <InputField type="email" name="email" placeholder="your.email@example.com" value={email} error={emailError} onChange={(e) => setEmail(e.target.value)} onBlur={handleEmailBlur}/>
+            {/*<input className={`inputform ${emailError ? "input-error" : ""}`} type="email" id="email" placeholder="your.email@example.com" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={handleEmailBlur} required />
+            {emailError && <span className="error-message">{emailError}</span>}*/}
 
-            <input className={`inputform ${emailError ? "input-error" : ""}`} type="email" id="email" placeholder="your.email@example.com" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={handleEmailBlur} required />
-            {emailError && <span className="error-message">{emailError}</span>}
+            <InputField type="text" name="subject" placeholder="Subject" value={subject} error={subjectError} onChange={(e) => setSubject(e.target.value)} onBlur={handleSubjectBlur}/>
+            {/*<input type="text" placeholder="Subject" className={`inputform ${subjectError ? "input-error" : ""}`} value={subject} onChange={(e) => setSubject(e.target.value)} onBlur={handleSubjectBlur} required />
+            {subjectError && <span className="error-message">{subjectError}</span>}*/}
 
-            <input type="text" placeholder="Subject" className={`inputform ${subjectError ? "input-error" : ""}`} value={subject} onChange={(e) => setSubject(e.target.value)} onBlur={handleSubjectBlur} required />
-            {subjectError && <span className="error-message">{subjectError}</span>}
-
-            <textarea className={`inputform formtextarea ${ messageError ? "input-error" : ""}`} id="message" placeholder="Tell us what you're looking for..." value={message} onChange={(e) => setMessage(e.target.value)} onBlur={handleMessageBlur} minLength={10} required />
-            {messageError && <span className="error-message">{messageError}</span>}
+            <TextareaField name="message" placeholder="Tell us what you&apos;re looking for..." value={message} error={messageError} onChange={(e) => setMessage(e.target.value)} onBlur={handleMessageBlur}/>
+            {/*<textarea className={`inputform formtextarea ${ messageError ? "input-error" : ""}`} id="message" placeholder="Tell us what you're looking for..." value={message} onChange={(e) => setMessage(e.target.value)} onBlur={handleMessageBlur} minLength={10} required />
+            {messageError && <span className="error-message">{messageError}</span>}*/}
 
             <button className="btn send" type="submit" disabled={isSubmitDisabled}><i className="fa-regular fa-paper-plane text-[#fff8f0]"></i> Send</button>
             {/*the button will be disabled if isSubmitDisabled = true*/}

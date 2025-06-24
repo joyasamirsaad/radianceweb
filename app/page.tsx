@@ -14,9 +14,9 @@ export default function homepage() {
           <p className="container mx-auto px-4">Because when your skin feels good, you feel unstoppable.</p>
       </section>*/}
 
-      <section className="descwhite">
-          <h1 className="text-center container mx-auto px-4">Your Success Stories Inspire Us</h1>
-          <div className="reviews container mx-auto px-4">
+      <section className="descwhite container mx-auto px-4">
+          <h1 className="text-center">Your Success Stories Inspire Us</h1>
+          <div className="reviews">
             <div className="reviews-div gap-2">
               <h2>Proof That Great Skin is Possible</h2>
               <p className="italic">&quot;I struggled with cystic acne for years and tried everything. Within 6 weeks of using this routine, my skin completely transformed. The breakouts stopped, my scars faded, and now I wake up confident every single day. This isn&apos;t just skincare - it&apos;s life-changing.&quot; — Sarah M., verified customer</p>
