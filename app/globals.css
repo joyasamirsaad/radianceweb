@@ -199,7 +199,7 @@ header {
 }
 
 .centerbtn {
-    @apply flex flex-col items-center justify-self-center m-8;
+    @apply flex flex-col items-center justify-center justify-self-center m-8;
 }
 
 .contactus, .delivery, .deliverynested {

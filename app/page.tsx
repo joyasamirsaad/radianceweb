@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Banner from '@/components/Banner';
+import ProductList from "@/components/ProductList";
+import { productsData } from "@/data/products";
 
 export default function homepage() {
+  const featuredProducts = productsData.slice(0, 4); //to display some of the products not all of them
   return (
     <>
       <Banner heroImageUrl='/heroimage.png' bannerText="Because when your skin feels good, you feel unstoppable."></Banner>
@@ -53,7 +56,9 @@ export default function homepage() {
       </section>
 
     <section id="products" className="desc">
-          <h1 className="text-center  px-0 sm:container sm:mx-auto sm:px-4">What Everyone&apos;s Raving About</h1>
+          <h1 className="text-center  px-0 sm:container sm:mx-auto sm:px-4">What Everyone&apos;s Raving About</h1> 
+          <ProductList products={featuredProducts} />
+          {/*
           <div className="product  px-0 sm:container sm:mx-auto sm:px-4">
               <div className="cards">
                   <div className="product-images"><img src="faceoil.jpg" alt="Face Oil"></img></div>
@@ -109,7 +114,7 @@ export default function homepage() {
                       </div>
                   </div>
               </div>
-          </div>
+          </div>*/}
           <Link href="/products"><button className="btn centerbtn">View More</button></Link>
     </section>
     </>

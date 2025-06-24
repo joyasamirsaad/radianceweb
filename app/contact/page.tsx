@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from 'react';
 import Banner from '@/components/Banner';
+import InputField from "@/components/InputField";
 
 export default function ContactUs() {
     // Form state

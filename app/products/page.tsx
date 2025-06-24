@@ -1,12 +1,17 @@
 import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import Banner from '@/components/Banner';
+import ProductList from "@/components/ProductList";
+import { productsData } from "@/data/products";
 
 export default function products() {
     return (
         <>
             <Banner heroImageUrl='/productshero.jpg' bannerText="Transform your routine, transform your confidence."></Banner>
-            <section id="products" className="desc">
+            <section id="products" className="desc"> 
+                <ProductList products={productsData} />
+                <ProductList products={productsData} />
+                {/*
                 <div className="product  px-0 sm:container sm:mx-auto sm:px-4">
                     <div className="cards">
                         <div className="product-images image-hover-effect inline-block overflow-hidden"><Image src="/faceoil.jpg" alt="Face Oil" width={300} height={300}></Image></div>
@@ -119,7 +124,7 @@ export default function products() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*/}
                 <Link href="/delivery"><button className="btn centerbtn">Order Now</button></Link>
             </section>
         </>
