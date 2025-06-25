@@ -3,11 +3,24 @@ import Link from 'next/link';
 import Banner from '@/components/Banner';
 import ProductList from "@/components/ProductList";
 import { productsData } from "@/data/products";
+import GridContainer from '@/components/Container';
+
 
 export default function products() {
     return (
         <>
-            <Banner heroImageUrl='/productshero.jpg' bannerText="Transform your routine, transform your confidence."></Banner>
+            <Banner heroImageUrl='/productshero.jpg' bannerText="Transform your routine, transform your confidence." bgColor='#F2F5F0' textColor='#2B2B2B'></Banner>
+            <GridContainer title="Our Product Range" description={[
+                    "Discover our carefully curated collection of skincare essentials, each formulated with premium ingredients and backed by science. From gentle cleansers to powerful serums, every product is designed to address specific skin concerns while maintaining the health of your skin barrier.",
+                    "Clinically-tested formulas for visible results.",
+                    "Find your perfect skincare match..."
+                ]}
+                btnText="Browse All Products" 
+                btnLink="#products"
+                imgSrc="/products.jpg"
+                imgAlt="Radiance skincare products collection"
+                imagePosition="left"
+            />
             <section id="products" className="desc"> 
                 <ProductList products={productsData} />
                 <ProductList products={productsData} />

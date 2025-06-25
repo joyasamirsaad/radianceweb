@@ -2,17 +2,31 @@ import Link from 'next/link';
 import Banner from '@/components/Banner';
 import ProductList from "@/components/ProductList";
 import { productsData } from "@/data/products";
+import GridContainer from '@/components/Container';
+
 
 export default function homepage() {
   const featuredProducts = productsData.slice(0, 4); //to display some of the products not all of them
   return (
     <>
-      <Banner heroImageUrl='/heroimage.png' bannerText="Because when your skin feels good, you feel unstoppable."></Banner>
+      <Banner heroImageUrl='/heroimage.png' bannerText="Because when your skin feels good, you feel unstoppable." bgColor='#3E5C50' textColor='#FFF4E6'></Banner>
       {/*<section className="hero"></section>
 
       <section className="banner">
           <p className="container mx-auto px-4">Because when your skin feels good, you feel unstoppable.</p>
       </section>*/}
+
+      <GridContainer title="Welcome to Radiance" description={[
+            "Transform your skincare routine with clean, effective formulas designed for real results. At Radiance, we combine the power of nature with cutting-edge science to create products that work for every skin type and concern.",
+            "Where healthy skin meets effortless beauty.",
+            "Unlock your most confident skin today..."
+        ]}
+        btnText="Get to know more about us" 
+        btnLink="/about"
+        imgSrc="/homepage.jpg"
+        imgAlt="Beautiful glowing skin"
+        imagePosition="left"
+    />
 
       <section className="descwhite container mx-auto px-4">
           <h1 className="text-center">Your Success Stories Inspire Us</h1>

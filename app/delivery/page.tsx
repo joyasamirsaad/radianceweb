@@ -8,6 +8,8 @@ import RadioGroup from "@/components/RadioGroup";
 import CreditCardFields from "@/components/CreditCardFields";
 
 import Banner from '@/components/Banner';
+import GridContainer from '@/components/Container';
+
 
 
 export default function Delivery() {
@@ -193,7 +195,18 @@ export default function Delivery() {
 
     return (
       <>
-        <Banner heroImageUrl='/deliveryhero.jpg' bannerText="Your perfect skin routine is just one click and quick delivery away..."></Banner>
+        <Banner heroImageUrl='/deliveryhero.jpg' bannerText="Your perfect skin routine is just one click and quick delivery away..." bgColor="#7BA487" textColor="#2B2B2B"></Banner>
+        <GridContainer title="Fast & Reliable Delivery" description={[
+                "Your skincare journey shouldn't have to wait. We offer fast, secure shipping with eco-friendly packaging to get your products to you quickly and safely. Free shipping on orders over $75, plus tracking updates every step of the way.",
+                "Your glowing skin is just days away.",
+                "Sustainable packaging, speedy delivery..."
+            ]}
+            btnText="Fill Info" 
+            btnLink="#delivery"
+            imgSrc="/delivery.jpg"
+            imgAlt="Eco-friendly skincare delivery package"
+            imagePosition="right"
+        />
         <section id="delivery" className="descwhite  container mx-auto px-4">
             <h1 className="text-center">Order Details</h1>
             <div className="delivery">

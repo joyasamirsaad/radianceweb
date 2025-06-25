@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Banner from '@/components/Banner';
 import InputField from "@/components/InputField";
 import TextareaField from "@/components/TextareaField";
+import GridContainer from '@/components/Container';
 
 export default function ContactUs() {
     // Form state
@@ -105,7 +106,18 @@ export default function ContactUs() {
 
     return (
         <>
-        <Banner heroImageUrl='/contactushero.jpg' bannerText="Your skin questions deserve expert answers - we're here to help!"></Banner>
+        <Banner heroImageUrl='/contactushero.jpg' bannerText="Your skin questions deserve expert answers - we're here to help!" bgColor='#D9A27F' textColor='#2B2B2B'></Banner>
+        <GridContainer title="Get In Touch" description={[
+                "Have questions about your skin or need help choosing the right products? Our skincare experts are here to help. Whether you need personalized recommendations or have concerns about your order, we're committed to providing exceptional customer service.",
+                "Expert advice for your skincare journey.",
+                "We're here to help you glow..."
+            ]}
+            btnText="Contact Our Team" 
+            btnLink="#contact"
+            imgSrc="/contact.jpg"
+            imgAlt="Friendly customer service representative"
+            imagePosition="left"
+        />
         <section id="contact" className="descwhite container mx-auto px-4">
         <h1 className="text-center">Send us a message</h1>
         <div className="contactus">

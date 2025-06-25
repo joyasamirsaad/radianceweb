@@ -38,7 +38,7 @@ header {
 }
 
 .banner {
-    @apply bg-[#3E5C50] text-[#FFF8F0] flex flex-col justify-center items-center text-center break-words py-5 min-h-[10vh] break-words;
+    @apply /*bg-[#3E5C50] text-[#FFF8F0]*/ flex flex-col justify-center items-center text-center break-words py-5 min-h-[10vh] break-words;
     font-family: 'Outfit', sans-serif;
 }
 
@@ -125,7 +125,7 @@ header {
     @apply /*bg-[url('/heroimage.png')]*/ bg-cover bg-no-repeat bg-top h-120 px-5 py-25;
 }
 
-.grid-container {
+/*.grid-container {
     @apply grid grid-cols-[3fr_1fr] my-2 gap-4;
 }
 
@@ -133,7 +133,7 @@ header {
     .grid-container {
         @apply flex flex-col;
     }
-} 
+}*/
 
 .aboutus {
     @apply rounded-lg flex flex-col justify-start;
