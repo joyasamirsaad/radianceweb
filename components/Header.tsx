@@ -74,10 +74,10 @@ export default function Header() {
 
                 <ul>
                     <li><Link href="/" className={pathname === "/" ? "active-link" : ""}>Home</Link></li>
-                    <li><Link href="/about" className={pathname === "/about" ? "active-link" : ""}>About Us</Link></li>
-                    <li><Link href="/products" className={pathname === "/products" ? "active-link" : ""}>Products</Link></li>
-                    <li><Link href="/delivery" className={pathname === "/delivery" ? "active-link" : ""}>Delivery</Link></li>
-                    <li><Link href="/contact" className={pathname === "/contact" ? "active-link" : ""}>Contact Us</Link></li>
+                    <li><Link href="/about" className={pathname === "/about/" ? "active-link" : ""}>About Us</Link></li>
+                    <li><Link href="/products" className={pathname === "/products/" ? "active-link" : ""}>Products</Link></li>
+                    <li><Link href="/delivery" className={pathname === "/delivery/" ? "active-link" : ""}>Delivery</Link></li>
+                    <li><Link href="/contact" className={pathname === "/contact/" ? "active-link" : ""}>Contact Us</Link></li>
                 </ul>
             </div>
             
