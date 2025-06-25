@@ -121,6 +121,10 @@ header {
     }
 }
 
+.active-link {
+  @apply text-[#5D8A72] font-semibold border-b-2 border-[#7BA487];
+}
+
 .hero {
     @apply /*bg-[url('/heroimage.png')]*/ bg-cover bg-no-repeat bg-top h-120 px-5 py-25;
 }
@@ -144,7 +148,7 @@ header {
 }
 
 .desc {
-    @apply bg-[#FFF8F0] text-[#2B2B2B] py-5 text-xl;
+    @apply bg-[#FFF8F0] text-[#2B2B2B] p-2 text-xl;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 

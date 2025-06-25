@@ -1,8 +1,12 @@
 "use client";
 import Link from 'next/link';
 import { useEffect } from "react";
+//import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+    //const router = useRouter();
+    const pathname = usePathname();
     useEffect(() => {
         const hamburger = document.querySelector('.hamburger') as HTMLElement | null;
         const navMenu = document.querySelector('.navbar ul') as HTMLElement | null;
@@ -49,6 +53,7 @@ export default function Header() {
         };
     }, []);
 
+    
   return (
     <header id="home" className="sticky top-0 z-50 bg-white shadow-md">
         <div className="header-top container mx-auto px-4">
@@ -68,11 +73,11 @@ export default function Header() {
                 </div>
 
                 <ul>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About Us</Link></li>
-                    <li><Link href="/products">Products</Link></li>
-                    <li><Link href="/delivery">Delivery</Link></li>
-                    <li><Link href="/contact">Contact Us</Link></li>
+                    <li><Link href="/" className={pathname === "/" ? "active-link" : ""}>Home</Link></li>
+                    <li><Link href="/about" className={pathname === "/about" ? "active-link" : ""}>About Us</Link></li>
+                    <li><Link href="/products" className={pathname === "/products" ? "active-link" : ""}>Products</Link></li>
+                    <li><Link href="/delivery" className={pathname === "/delivery" ? "active-link" : ""}>Delivery</Link></li>
+                    <li><Link href="/contact" className={pathname === "/contact" ? "active-link" : ""}>Contact Us</Link></li>
                 </ul>
             </div>
             
