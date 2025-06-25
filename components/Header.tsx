@@ -7,6 +7,9 @@ import { usePathname } from "next/navigation";
 export default function Header() {
     //const router = useRouter();
     const pathname = usePathname();
+    const normalizePath = (path: string) => path.replace(/\/$/, "");
+    const isActive = (href: string) => normalizePath(pathname) === normalizePath(href);
+
     useEffect(() => {
         const hamburger = document.querySelector('.hamburger') as HTMLElement | null;
         const navMenu = document.querySelector('.navbar ul') as HTMLElement | null;
@@ -73,11 +76,11 @@ export default function Header() {
                 </div>
 
                 <ul>
-                    <li><Link href="/" className={pathname === "/" ? "active-link" : ""}>Home</Link></li>
-                    <li><Link href="/about" className={pathname === "/about/" ? "active-link" : ""}>About Us</Link></li>
-                    <li><Link href="/products" className={pathname === "/products/" ? "active-link" : ""}>Products</Link></li>
-                    <li><Link href="/delivery" className={pathname === "/delivery/" ? "active-link" : ""}>Delivery</Link></li>
-                    <li><Link href="/contact" className={pathname === "/contact/" ? "active-link" : ""}>Contact Us</Link></li>
+                    <li><Link href="/" className={isActive("/") ? "active-link" : ""}>Home</Link></li>
+                    <li><Link href="/about" className={isActive("/about") ? "active-link" : ""}>About Us</Link></li>
+                    <li><Link href="/products" className={isActive("/products") ? "active-link" : ""}>Products</Link></li>
+                    <li><Link href="/delivery" className={isActive("/delivery") ? "active-link" : ""}>Delivery</Link></li>
+                    <li><Link href="/contact" className={isActive("/contact") ? "active-link" : ""}>Contact Us</Link></li>
                 </ul>
             </div>
             
