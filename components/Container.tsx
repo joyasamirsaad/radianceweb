@@ -14,7 +14,7 @@ type ContainerProps = {
 export default function Container({title, description, btnText, btnLink, imgSrc, imgAlt, imagePosition}: ContainerProps) {
     return (
         <section id="about" className={`container mx-auto px-4 flex flex-col md:items-center md:my-2 gap-4 md:flex-row ${imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row"}`}>
-            <div className="aboutus descwhite flex-[3]">
+            <div className="aboutus desc flex-[3]">
                 <h1>{title}</h1>
                 {description.map((text, i) => (
                     <p key={i}>{text}</p>
