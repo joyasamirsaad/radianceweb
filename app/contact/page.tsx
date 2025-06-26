@@ -5,6 +5,7 @@ import Banner from '@/components/Banner';
 import InputField from "@/components/InputField";
 import TextareaField from "@/components/TextareaField";
 import GridContainer from '@/components/Container';
+import RadioForm from '@/components/RadioForm';
 
 export default function ContactUs() {
     // Form state
@@ -145,10 +146,16 @@ export default function ContactUs() {
             {/*when showSuccessMessage true, set message to message sent successfully and display*/}
             </form>
         </div> 
-      </section>
 
-        
-
+        <RadioForm name="meeting" legend="Select the Meeting Request Type"
+                            options={[
+                                { value: "Phone consultation", label: "Phone consultation" },
+                                { value: "Video Call", label: "Video Call" },
+                                { value: "In-person Meeting", label: "In-person Meeting" },
+                                { value: "No Meeting Needed", label: "No Meeting Needed" },
+                            ]}
+        />
+        </section>
         </>
     );
 }
