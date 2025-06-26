@@ -38,7 +38,7 @@ export default function TeamSwiper() {
                   <h3 className="text-lg sm:text-xl font-semibold mb-1">{member.name}</h3>
                   <p className="text-sm text-gray-500 mb-3">{member.role}</p>
                 </div>
-                <p className="text-xs sm:text-sm italic text-gray-600 leading-relaxed">&quot;"{member.quote}&quot;"</p>
+                <p className="text-xs sm:text-sm italic text-gray-600 leading-relaxed">&quot;{member.quote}&quot;</p>
               </div>
             </div>
           </SwiperSlide>
