@@ -12,7 +12,8 @@
     "@netlify/next": "^1.4.9",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "swiper": "^11.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",
@@ -28,8 +29,8 @@
     "vite": "^6.3.5"
   },
   "engines": {
-  "node": "20.14.0",
-  "npm": "10.x"
-},
-"build": "react-scripts build"
+    "node": "20.14.0",
+    "npm": "10.x"
+  },
+  "build": "react-scripts build"
 }
