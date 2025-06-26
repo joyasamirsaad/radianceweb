@@ -9,17 +9,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { teamData } from "@/data/team";
+import '../app/globals.css'
 
 export default function TeamSwiper() {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [atEnd, setAtEnd] = useState(false);
   const [atStart, setAtStart] = useState(true);
+  //const [activeIndex, setActiveIndex] = useState(0);
     
   return (
     <section className="desc container mx-auto px-4 py-16">
       <h1 className='text-center mb-8'>Meet Our Team</h1>
       <Swiper
-        onSwiper={setSwiper} 
+        onSwiper={setSwiper}
+        //onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} 
         spaceBetween={20} 
         slidesPerView={1}
         modules={[Navigation, Pagination]}
@@ -29,7 +32,11 @@ export default function TeamSwiper() {
           1024: { slidesPerView: 4, spaceBetween: 30 },
         }}
         navigation={false} 
-        pagination={{ clickable: true }}
+        pagination={{ clickable: true, /*renderBullet: (index, className) => {
+    return `<span class="${className}" style="background: ${ index === activeIndex ? '#3E5C50' : 'black' }"></span>`; }*/}}
+        
+        
+        
         onReachEnd={() => setAtEnd(true)}
         onReachBeginning={() => setAtStart(true)}
         onFromEdge={() => {setAtEnd(false); setAtStart(false);}}

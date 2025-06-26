@@ -366,3 +366,13 @@ footer i {
 .reviews-div {
     @apply flex flex-col justify-center items-center;
 }
+
+.swiper-pagination-bullet {
+  background-color: #ccc !important;
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #3E5C50 !important;
+  opacity: 1 !important;
+}
