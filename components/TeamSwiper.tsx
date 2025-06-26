@@ -3,15 +3,18 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import SwiperClass from 'swiper'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { teamData } from "@/data/team";
 
 export default function TeamSwiper() {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
-
+  const [atEnd, setAtEnd] = useState(false);
+  const [atStart, setAtStart] = useState(true);
+    
   return (
     <section className="desc container mx-auto px-4 py-16">
       <h1 className='text-center mb-8'>Meet Our Team</h1>
@@ -19,13 +22,17 @@ export default function TeamSwiper() {
         onSwiper={setSwiper} 
         spaceBetween={20} 
         slidesPerView={1}
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         breakpoints={{
           640: { slidesPerView: 1, spaceBetween: 20 },
           768: { slidesPerView: 3, spaceBetween: 24 },
           1024: { slidesPerView: 4, spaceBetween: 30 },
         }}
         navigation={false} 
+        pagination={{ clickable: true }}
+        onReachEnd={() => setAtEnd(true)}
+        onReachBeginning={() => setAtStart(true)}
+        onFromEdge={() => {setAtEnd(false); setAtStart(false);}}
       >
         {teamData.map((member, index) => (
           <SwiperSlide key={index} className="mb-10">
@@ -47,11 +54,11 @@ export default function TeamSwiper() {
 
       <div className="flex justify-center gap-6 mt-8">
         <button onClick={() => swiper?.slidePrev()} aria-label="Previous slide" className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors duration-200">
-          <i className="fa-solid fa-arrow-left text-gray-700"></i>
+          <i className={`fa-solid fa-arrow-left text-gray-700 ${atStart ? 'opacity-50' : 'opacity-100'}`}></i>
         </button>
 
         <button onClick={() => swiper?.slideNext()} aria-label="Next slide" className="p-3 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors duration-200">
-          <i className="fa-solid fa-arrow-right text-gray-700"></i>
+          <i className={`fa-solid fa-arrow-right text-gray-700 ${atEnd ? 'opacity-50' : 'opacity-100'}`}></i>
         </button>
       </div>
     </section>
