@@ -2,6 +2,7 @@
 //import Image from 'next/image';
 import Banner from '@/components/Banner';
 import GridContainer from '@/components/Container';
+import TeamSwiper from '@/components/TeamSwiper';
 
 export default function about(){
     return (
@@ -30,6 +31,8 @@ export default function about(){
                 imgAlt="Girl Skincare Image"
                 imagePosition = "right"
             />
+
+            <TeamSwiper />
         </>
         
     );
