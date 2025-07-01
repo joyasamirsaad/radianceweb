@@ -32,7 +32,7 @@ export default function ModalBox({size, handleOpenAction, mtitle, mdescription, 
     //const handleOpen = (value:string | null) => setSize(value);
 
     return(
-    <Dialog open={size === "md"} handler={toggle} className="!fixed" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+    <Dialog open={size === "md"} handler={toggle} className="!fixed !inset-0" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <DialogHeader className="text-center justify-self-center text-4xl" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>{mtitle}</DialogHeader>
         <DialogBody placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
         <Container title="Product Details" description={mdescription}
