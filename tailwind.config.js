@@ -16,3 +16,26 @@ module.exports = {
     }
   }
 }
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+ 
+module.exports = withMT({
+  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        forest: '#3E5C50',
+        mywhite: '#FFF8F0',
+        backwhite: '#FFF4E6',
+        softgreen: '#7BA487',
+        charcoal: '#2B2B2B',
+        lightgreen: '#A8C3A5'
+      },
+      fontFamily: {
+        Jakarta: 'Plus Jakarta Sans',
+        Outfit: 'Outfit'
+      }
+    },
+  },
+  plugins: [],
+});
