@@ -53,7 +53,7 @@ export default function Products() {
             />
             <section id="products" className="desc">
                 <div className="container mx-auto px-4">
-                    <Accordion open={alwaysOpen} className="border-b-2 border-[#7BA487] mb-2" icon={<Icon id={1} open={open} />} placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                    <Accordion open={alwaysOpen} className="border-b-2 border-[#7BA487] mb-2" icon={<Icon id={1} open={alwaysOpen ? 1 : 0} />} placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                         <AccordionHeader onClick={handleAlwaysOpen} className={`${alwaysOpen ? "text-[#3E5C50] font-semibold" : "black"}`} placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>New Arrivals</AccordionHeader>
                         <AccordionBody>
                             <ProductList products={productsData} />

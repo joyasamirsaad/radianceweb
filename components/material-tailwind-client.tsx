@@ -1,12 +1,16 @@
 "use client";
 import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
 } from "@material-tailwind/react";
 
 export {
-    Accordion,
-    AccordionHeader,
-    AccordionBody,
+    Button,
+    Dialog,
+    DialogHeader,
+    DialogBody,
+    DialogFooter,
 };
