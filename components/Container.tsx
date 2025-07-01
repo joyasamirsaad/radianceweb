@@ -4,8 +4,8 @@ import Image from 'next/image';
 type ContainerProps = {
     title: string;
     description: string[];
-    btnText: string;
-    btnLink: string;
+    btnText?: string;
+    btnLink?: string;
     imgSrc: string;
     imgAlt: string;
     imagePosition: "left" | "right";

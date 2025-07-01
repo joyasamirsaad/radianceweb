@@ -5,6 +5,7 @@ type Product = {
   altText: string;
   name: string;
   description: string;
+  details: string[];
   price: string;
 };
 

@@ -3,10 +3,10 @@ import Image from "next/image";
 import React from "react";
 import {
   Button,
-  Dialog,
+  /*Dialog,
   DialogHeader,
   DialogBody,
-  DialogFooter,
+  DialogFooter,*/
 } from "@material-tailwind/react"; //from "@/components/material-tailwind-client";
 //import Container from "./Container";
 import ModalBox from "./ModalBox";

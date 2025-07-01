@@ -39,6 +39,8 @@ export default function ModalBox({size, handleOpenAction, mtitle, mdescription, 
             imgSrc={mimgSrc}
             imgAlt={mimgAlt}
             imagePosition={mimagePosition}
+            btnText={undefined}
+            btnLink={undefined}
         />
         </DialogBody>
         <DialogFooter className="flex items-center justify-center" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
